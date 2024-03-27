@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="{{ asset('Assets/plugins/font-awesome/css/font-awesome.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('Assets/css/ion201ionicons.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('Assets/css/adminlte.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('Assets/plugins/iCheck/flat/blue.css') }}"/>
+<link rel="stylesheet" href="{{ asset('Assets/plugins/morris/morris.css') }}"/>
+<link rel="stylesheet" href="{{ asset('Assets/plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}"/>
+<link rel="stylesheet" href="{{ asset('Assets/plugins/datepicker/datepicker3.css') }}"/>
+<link rel="stylesheet" href="{{ asset('Assets/plugins/daterangepicker/daterangepicker-bs3.css') }}"/>
+<link rel="stylesheet" href="{{ asset('Assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}"/>
+<link href="{{ asset('Assets/css/css.css') }}" rel="stylesheet"/>
+<link rel="stylesheet" href="{{ asset('Assets/css/bootstrap-rtl.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('Assets/css/custom-style.css') }}"/>
