@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChannelController;
+use App\Http\Controllers\GroupController;
+use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SpecialPeopleController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,25 +20,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {return view('Pages.panel');})->name('panel');
+Route::get('/', [ProfileController::class , 'panel'])->name('panel');
+Route::get('/login', [UserController::class , 'showLogin'])->name('show.login');
+Route::get('/change_pass', [ProfileController::class , 'showChangePass'])->name('change.pass');
+Route::get('/edit_profile', [ProfileController::class , 'showEditProfile'])->name('edit.profile');
+Route::get('/profile', [ProfileController::class , 'Profile'])->name('profile');
+Route::get('/channel_list', [ChannelController::class,'List'])->name('channel.list');
+Route::get('/group_list', [GroupController::class,'List'])->name('group.list');
+Route::get('/special_people_list', [SpecialPeopleController::class,'List'])->name('special.people.list');
+Route::get('/list_admin', [AdminController::class,'list'])->name('admin.list');
+Route::get('/massage_list', [NotificationController::class,'List'])->name('massage.list');
+Route::get('/add_special_people', [SpecialPeopleController::class , 'showForm'])->name('add.special.people');
+Route::get('/send_notification',[NotificationController::class, 'showForm'])->name('send.notification');
 
-Route::get('/login', function () {return view('Pages.login');})->name('login');
-
-//profile
-Route::get('/change_pass', function () {return view('Pages.change_pass');})->name('change_pass');
-Route::get('/edit_profile', function () {return view('Pages.edit_profile');})->name('edit_profile');
-Route::get('/profile', function () {return view('Pages.profile');})->name('profile');
-Route::get('/logout',function (){return view('pages.panel');})->name('logout');
-
-//list
-Route::get('/channel_list', function () {return view('lists.channel_list');})->name('channel_list');
-Route::get('/group_list', function () {return view('lists.group_list');})->name('group_list');
-Route::get('/special_people_list', function () {return view('lists.special_people_list');})->name('special_people_list');
-Route::get('/admin_list', function () {return view('lists.admin_list');})->name('admin_list');
-Route::get('/massage_list', function () {return view('lists.massage_list');})->name('massage_list');
-
-//adds
-Route::get('/add_admin',function (){return view('pages.add_admin');})->name('add_admin');
-Route::get('/add_special_people',function (){return view('pages.add_special_people');})->name('add_special_people');
-
-Route::get('/send_notification',function (){return view('pages.send_notification');})->name('send_notification');

@@ -27,13 +27,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('edit_profile') }}" class="nav-link">
+                                    <a href="{{ route('edit.profile') }}" class="nav-link">
                                         <i class="fa fa-circle nav-icon"></i>
                                         <p>ویرایش پروفایل</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('change_pass') }}" class="nav-link">
+                                    <a href="{{ route('change.pass') }}" class="nav-link">
                                         <i class="fa fa-circle nav-icon"></i>
                                         <p>تغییر رمز عبور</p>
                                     </a>
@@ -63,13 +63,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('add_admin') }}" class="nav-link">
+                                <a href="{{ route('add.admin') }}" class="nav-link">
                                     <i class="fa fa-circle nav-icon"></i>
                                     <p>اضافه کردن ادمین جدید</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('admin_list') }}"" class="nav-link">
+                                <a href="{{ route('admin.list') }}" class="nav-link">
                                 <i class="fa fa-circle nav-icon"></i>
                                 <p>لیست ادمین ها</p>
                                 </a>
@@ -86,13 +86,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('add_special_people') }}" class="nav-link">
+                                <a href="{{ route('add.special.people') }}" class="nav-link">
                                     <i class="fa fa-circle nav-icon"></i>
                                     <p>اضافه کردن فرد جدید</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('special_people_list') }}" class="nav-link">
+                                <a href="{{ route('special.people.list') }}" class="nav-link">
                                     <i class="fa fa-circle nav-icon"></i>
                                     <p>لیست افراد خاص</p>
                                 </a>
@@ -100,19 +100,19 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('group_list') }}" class="nav-link">
+                        <a href="{{ route('group.list') }}" class="nav-link">
                             <i class="fa fa-circle nav-icon"></i>
                             <p>لیست گروه ها</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('channel_list') }}" class="nav-link">
+                        <a href="{{ route('channel.list') }}" class="nav-link">
                             <i class="nav-icon fa fa-edit"></i>
                             <p>لیست کانال ها</p>
                         </a>
                     </li>
                     <li class="nav-item has-treeview">
-                        <a href="{{ route('send_notification') }}" class="nav-link">
+                        <a href="{{ route('send.notification') }}" class="nav-link">
                             <i class="nav-icon fa fa-envelope"></i>
                             <p>
                                 ارسال پیام

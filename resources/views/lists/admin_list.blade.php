@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>لیست کابران</title>
+    <title>لیست کاربران</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @include('cssLink')
 </head>
+
 <body class="hold-transition sidebar-mini">
 @include('sidebar')
 <div class="content-wrapper">
@@ -15,7 +16,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>لیست کاربران</h1>
+                    <h1>لیست ادمین ها</h1>
                 </div>
             </div>
         </div>
@@ -38,27 +39,24 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>علی کرمی</td>
-                                        <td>ali.gmail.com</td>
-                                        <td>09301908224</td>
-                                        <td>123456</td>
-                                        <td>123456</td>
-                                        <td>
-                                            <button class="btn btn-outline-primary btn-sm">ویرایش</button>
-                                            <button class="btn btn-outline-danger btn-sm">حذف</button>
-                                        </td>
-                                    </tr>
+                                    @foreach ($users as $user)
+                                        <tr>
+                                            <td>{{ $user->full_name }}</td>
+                                            <td>{{ $user->email }}</td>
+                                            <td>{{ $user->phone_number }}</td>
+                                            <td>{{ $user->password }}</td>
+                                            <td>
+                                                <button class="btn btn-outline-primary btn-sm">ویرایش</button>
+                                                <button class="btn btn-outline-danger btn-sm">حذف</button>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                         <div class="card-tools">
-                            <ul class="pagination pagination-sm">
-                                <li class="page-item"><a href="#" class="page-link" data-action="1">۱</a></li>
-                                <li class="page-item"><a href="#" class="page-link" data-action="2">۲</a></li>
-                                <li class="page-item"><a href="#" class="page-link" data-action="3">۳</a></li>
-                            </ul>
+                            {{ $users->links() }}
                         </div>
                     </div>
                 </div>
@@ -68,4 +66,5 @@
 </div>
 @include('jsLink')
 </body>
+
 </html>

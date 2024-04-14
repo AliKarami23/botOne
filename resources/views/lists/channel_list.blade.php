@@ -21,12 +21,15 @@
     </section>
     <div class="container mt-3">
         <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-12 mx-auto">
                 <form>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="جستجو بر اساس نام کانال" aria-label="جستجو بر اساس نام کانال" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">اعمال فیلتر</button>
+                        <div class="input-group-append-sm-6">
+                            <a href="{{ route('filter.channel') }}" class="btn btn-outline-primary float-left mr-2">جستجو</a>
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="{{ route('get.Channel') }}" class="btn btn-outline-primary float-left mr-2">بروزرسانی</a>
                         </div>
                     </div>
                 </form>
@@ -47,18 +50,18 @@
                                         <th>شماره آیدی کانال</th>
                                         <th>توضیحات</th>
                                         <th>تعداد عضو</th>
-                                        <th>مشاهده</th>
 
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>کانال 1</td>
-                                        <td>234332</td>
-                                        <td></td>
-                                        <td>245</td>
-                                        <td><a href="#">مشاهده</a></td>
-                                    </tr>
+                                    @foreach($channels as $channel)
+                                        <tr>
+                                            <td>{{ $channel->name }}</td>
+                                            <td>{{ $channel->channel_id }}</td>
+                                            <td>{{ $channel->description }}</td>
+                                            <td>{{ $channel->number_of_subscribers }}</td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
